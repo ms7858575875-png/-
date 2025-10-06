@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>🌙 مكتبة الفيديوهات</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap');
+
+    body {
+      font-family: "Tajawal", sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom, #0d1b2a, #1b263b, #2c3e50);
+      color: #f1f1f1;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('https://www.transparenttextures.com/patterns/stardust.png');
+      animation: stars 100s linear infinite;
+      opacity: 0.4;
+      z-index: -2;
+    }
+
+    @keyframes stars {
+      from { background-position: 0 0; }
+      to { background-position: 10000px 10000px; }
+    }
+
+    header {
+      background: rgba(0, 0, 0, 0.7);
+      padding: 25px 15px;
+      text-align: center;
+      border-bottom: 2px solid #e0c97f;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+      color: #e0c97f;
+      text-shadow: 0 0 20px #c1a84b, 0 0 40px #f1c40f;
+    }
+
+    nav {
+      margin-top: 15px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    nav a {
+      color: #f1f1f1;
+      text-decoration: none;
+      margin: 6px 10px;
+      font-size: 1.1em;
+      padding: 8px 16px;
+      border-radius: 25px;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      background: #e0c97f;
+      color: #1b263b;
+      transform: scale(1.1);
+    }
+
+    main {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h2 {
+      color: #e0c97f;
+      margin-bottom: 25px;
+      font-size: 26px;
+      text-align: center;
+      text-shadow: 0 0 12px #c1a84b;
+    }
+
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 20px;
+      width: 100%;
+    }
+
+    .video-card {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      backdrop-filter: blur(6px);
+      text-align: center;
+      padding-bottom: 15px;
+    }
+
+    .video-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.8);
+    }
+
+    video {
+      width: 100%;
+      max-height: 210px;
+      border: none;
+      background: #000;
+    }
+
+    .video-info {
+      padding: 10px 15px;
+    }
+
+    .video-info h3 {
+      margin: 5px 0;
+      font-size: 18px;
+      color: #f1f1f1;
+      text-shadow: 0 0 6px #222;
+    }
+
+    .video-info p {
+      font-size: 14px;
+      color: #dcdcdc;
+      margin-bottom: 10px;
+    }
+
+    .download-btn {
+      display: inline-block;
+      padding: 8px 16px;
+      font-size: 14px;
+      border-radius: 20px;
+      text-decoration: none;
+      color: #1b263b;
+      background-color: #e0c97f;
+      transition: 0.3s;
+    }
+
+    .download-btn:hover {
+      background-color: #c1a84b;
+    }
+
+    footer {
+      margin-top: 50px;
+      background: rgba(0, 0, 0, 0.7);
+      padding: 15px;
+      font-size: 0.9em;
+      border-top: 2px solid #e0c97f;
+      color: #ccc;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🌙 مكتبة الفيديوهات 🌙</h1>
+    <nav>
+      <a href="index.html">الرئيسية</a>
+      <a href="quran.html">القرآن</a>
+      <a href="duaa.html">الأدعية</a>
+      <a href="videos.html">الفيديوهات</a>
+      <a href="stories.html">قصص الأنبياء</a>
+      <a href="adhkar.html">أذكار الصباح والمساء</a>
+      <a href="thoughts.html">خواطر روحية</a>
+      <a href="names.html">🕋 أسماء الله الحسنى</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>✨ الفيديوهات المحفوظة في ملفات الموقع ✨</h2>
+    <div class="video-grid">
+
+      <!-- فيديو محلي mp4 -->
+      <div class="video-card">
+        <video controls>
+          <source src="videos/yusuf.mp4" type="video/mp4">
+          متصفحك لا يدعم تشغيل الفيديو.
+        </video>
+        <div class="video-info">
+          <h3>سورة يوسف كاملة</h3>
+          <p>تلاوة رائعة بصوت القارئ علي اليوسف</p>
+          <a href="videos/yusuf.mp4" download="Sourat_Yusuf.mp4" class="download-btn">⬇ تحميل الفيديو</a>
+        </div>
+      </div>
+
+      <!-- فيديو محلي mp4 -->
+      <div class="video-card">
+        <video controls>
+          <source src="videos/fajr.mp4" type="video/mp4">
+          متصفحك لا يدعم تشغيل الفيديو.
+        </video>
+        <div class="video-info">
+          <h3>أذكار الفجر</h3>
+          <p>مقطع صوتي لأذكار الفجر الصباحية</p>
+          <a href="videos/fajr.mp4" download="Adkar_Fajr.mp4" class="download-btn">⬇ تحميل الفيديو</a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <p>جميع الحقوق محفوظة © موقع صدقة لأخي أنس - 2025</p>
+  </footer>
+</body>
+</html>
